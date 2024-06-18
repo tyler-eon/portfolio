@@ -1,0 +1,21 @@
+<div id="user">
+  <section id="info">
+    <h2 class="title">User Info</h2>
+    <table class="table-auto with-borders">
+      <tr>
+        <td>User ID</td>
+        <td><%= @user.id %></td>
+      </tr>
+    </table>
+
+    <div id="stripe-details" class="flex">
+      <.live_component
+        module={InnealWeb.UserLive.StripeComponent}
+        id={@user[:id]}
+        stripe={@stripe}
+        locale={@locale}
+        timezone={@timezone}
+      />
+    </div>
+  </section>
+</div>

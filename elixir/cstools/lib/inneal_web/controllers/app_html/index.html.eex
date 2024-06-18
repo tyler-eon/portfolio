@@ -1,0 +1,21 @@
+<section>
+  <h3 class="title">User Search</h3>
+  <form id="user-search" action="/app/search" method="POST">
+    <input type="hidden" name="_csrf_token" value="<%= get_csrf_token() %>" />
+    <div class="flex flex-row py-2">
+      <label class="font-bold basis-1/5">Provider</label>
+      <div class="basis-4/5">
+        <select class="rounded" name="provider">
+          <option value="discord">Discord</option>
+        </select>
+      </div>
+    </div>
+    <div class="flex flex-row py-2">
+      <label class="font-bold basis-1/5">Provider ID</label>
+      <div class="basis-4/5">
+        <input type="text" class="rounded" name="user_id" placeholder="Provider-native User ID" />
+      </div>
+    </div>
+    <button type="submit" class="confirm">Search</button>
+  </form>
+</section>

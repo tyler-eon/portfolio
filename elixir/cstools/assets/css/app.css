@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply pt-8;
+    @apply pb-2;
+  }
+
+  a {
+    @apply text-blue-600;
+    @apply hover:text-purple-800;
+  }
+
+  p {
+    @apply mb-6;
+  }
+}
+
+@layer components {
+  button.confirm {
+    @apply text-white;
+    @apply bg-violet-600;
+    @apply rounded;
+    @apply px-4;
+    @apply py-2;
+  }
+
+  button.danger {
+    @apply text-white;
+    @apply bg-red-600;
+    @apply rounded;
+    @apply px-4;
+    @apply py-2;
+  }
+
+  section {
+    @apply p-4;
+    @apply my-4;
+    @apply rounded;
+    @apply shadow-lg;
+  }
+
+  section > .title {
+    @apply text-2xl;
+    @apply py-2;
+    @apply mt-4;
+  }
+
+  table.with-borders {
+    @apply border;
+    @apply border-collapse;
+    @apply border-slate-500;
+  }
+
+  table.with-borders th {
+    @apply border;
+    @apply border-slate-500;
+    @apply p-2;
+  }
+
+  table.with-borders td {
+    @apply border;
+    @apply border-slate-500;
+    @apply p-2;
+  }
+}

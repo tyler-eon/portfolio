@@ -1,0 +1,19 @@
+<nav class="shadow-lg">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="flex justify-between">
+      <div class="flex space-x-7">
+        <div>
+          <a class="flex items-center p-4 text-xl" href="/app">CS Tool</a>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a class="p-4" href="/app">Search</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="md:container py-8">
+  <.flash_group flash={@flash} />
+  <%= @inner_content %>
+</div>
