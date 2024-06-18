@@ -39,7 +39,7 @@ async def push_entitlements_from_line_items(
         "Pushing entitlements for user.", {"user_id": user_id, "price_ids": price_ids}
     )
 
-    await ctx.push_entitlements(
-        user_id,
-        price_ids
-    )
+    # We would have some logic here to fetch entitlement data from the Stripe price ids via `ctx.database`.
+    # Then, if we successfully fetched one or more entitlements, we would throw that into an entitlements event payload.
+    # That payload would then be sent over Cloud Pub/Sub for further processing.
+
